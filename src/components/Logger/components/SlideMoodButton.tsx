@@ -1,10 +1,12 @@
-import { Dimensions, Platform, Pressable, useColorScheme, View } from 'react-native';
+import { Dimensions, Platform, Pressable, useColorScheme, View, Text } from 'react-native';
 import { Check } from 'react-native-feather';
 import useHaptics from '@/hooks/useHaptics';
-import { LogItem } from '@/hooks/useLogs';
+import { LogItem, RATING_EMOJI_MAPPING } from '@/hooks/useLogs';
 import useScale from '@/hooks/useScale';
+import { t } from "@/helpers/translation"; 
 
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
+
 
 export const SlideMoodButton = ({
   rating, selected, onPress
@@ -18,7 +20,7 @@ export const SlideMoodButton = ({
   const colorScheme = useColorScheme();
 
   const height = Math.max(40, SCREEN_HEIGHT * 0.48 / 7);
-  const width = height * 2.4;
+  const width = height * 3;
 
   return (
     <Pressable
@@ -48,6 +50,19 @@ export const SlideMoodButton = ({
           color={selected ? scale.colors[rating].text : 'transparent'}
           width={24}
           height={24} />
+         <Text style={{ fontSize: 24 }}>{RATING_EMOJI_MAPPING[rating]}</Text>
+
+        <Text
+          style={{
+            color: scale.colors[rating].text,
+            fontSize: 14,
+            fontWeight: 'bold',
+            textAlign: 'center',
+            marginTop: 2, // Pequeno espaçamento entre emoji e texto
+          }}
+        >
+          {t(`ratings.${rating}`)}
+        </Text>
       </View>
     </Pressable>
   );

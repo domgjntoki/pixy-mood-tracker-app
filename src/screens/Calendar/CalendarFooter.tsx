@@ -9,7 +9,7 @@ import { View } from "react-native";
 import { PlusCircle } from "react-native-feather";
 import { PromoCards } from "./PromoCards";
 import { FeedbackBox } from "../LogList/FeedbackBox";
-import { Armchair, Bot } from "lucide-react-native";
+import { Armchair, Bot, MessageCircle } from "lucide-react-native";
 import { IS_PROD } from "@/constants/Config";
 
 export const CalendarFooter = () => {
@@ -60,7 +60,7 @@ export const CalendarFooter = () => {
               <View>
                 <Button
                   type="secondary"
-                  icon={<Bot size={24} color={colors.secondaryButtonText} />}
+                  icon={<MessageCircle size={24} color={colors.secondaryButtonText} />}
                   onPress={() => {
                     navigation.navigate("BotLogger", {
                       dateTime: dayjs().toISOString(),

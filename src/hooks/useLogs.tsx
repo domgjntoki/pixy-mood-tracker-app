@@ -31,6 +31,16 @@ export const RATING_MAPPING = {
   extremely_bad: 0,
 };
 
+export const RATING_EMOJI_MAPPING: Record<LogItem['rating'], string> = {
+  extremely_good: "😆",
+  very_good: "😊",
+  good: "🙂",
+  neutral: "😐",
+  bad: "🙁",
+  very_bad: "😞",
+  extremely_bad: "😡",
+};
+
 export const SLEEP_QUALITY_MAPPING = {
   very_good: 4,
   good: 3,

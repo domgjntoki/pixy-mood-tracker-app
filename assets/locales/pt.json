@@ -687,14 +687,14 @@
   "bot_question_rating_response_negative": "Parece que hoje foi difícil. Você não está sozinho e estou aqui para apoiá-lo.",
   "bot_question_rating_response_neutral": "Fico feliz em saber que você está bem.",
   "bot_question_sleep_quality_text": "Como você dormiu?",
-  "bot_question_sleep_quality_answer_prefix": "Eu diria que foi {{qualidade}}",
+  "bot_question_sleep_quality_answer_prefix": "Eu diria que foi {{quality}}",
   "bot_question_sleep_quality_response_positive": "Fico feliz em saber que dormiu bem 😌",
   "bot_question_sleep_quality_response_negative": "Parece que você não dormiu bem. Você não está sozinho e estou aqui para apoiá-lo.",
   "bot_question_sleep_quality_response_neutral": "Fico feliz em saber que você dormiu bem.",
   "bot_question_emotions_text": "Você quer adicionar emoções que sentiu?",
   "bot_question_emotions_button_yes": "Adicionar emoções",
   "bot_question_emotions_answer_empty": "Eu não quero adicionar emoções",
-  "bot_question_emotions_answer_emotions": "eu senti {{emoções}}",
+  "bot_question_emotions_answer_emotions": "Eu senti {{emotions}}",
   "bot_question_emotions_button_skip": "Pular",
   "bot_question_emotions_answer_skip": "Eu não quero adicionar emoções",
   "bot_question_emotions_button_done": "Acabei de rastrear.",
@@ -712,7 +712,7 @@
   "bot_text_outro": "Por enquanto é isso. Espero que tenham gostado deste check-in.",
   "bot_question_introduction_button_yes": "Vamos",
   "bot_question_introduction_answer_yes": "OK vamos começar",
-  "bot_checkin": "Check-in de bots",
+  "bot_checkin": "Relatar meu dia no chat",
   "bot_button_close": "Fechar",
   "bot_input_placeholder": "Pressione enviar para pular...",
   "bot_question_message_text": "Deseja adicionar mais alguma coisa à sua entrada?",
@@ -722,5 +722,14 @@
   "bot_question_custom_feedback_text": "Incrível, quase pronto.\n\nDeseja adicionar algum comentário? Posso fazer algo melhor?",
   "bot_question_custom_feedback_answer_text": "Eu quero adicionar: {{text}}",
   "bot_question_custom_feedback_answer_empty": "Não quero adicionar comentários",
-  "bot_question_custom_feedback_response": "Muito obrigado pelo seu feedback, vou enviá-lo ao meu desenvolvedor."
+  "bot_question_custom_feedback_response": "Muito obrigado pelo seu feedback, vou enviá-lo ao meu desenvolvedor.",
+  "ratings": {
+    "extremely_good": "Extremamente Bom",
+    "very_good": "Muito Bom",
+    "good": "Bom",
+    "neutral": "Neutro",
+    "bad": "Ruim",
+    "very_bad": "Muito Ruim",
+    "extremely_bad": "Extremamente Ruim"
+  }
 }
