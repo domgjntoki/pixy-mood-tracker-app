@@ -14,7 +14,7 @@ import { LogsState, STORAGE_KEY as STORAGE_KEY_LOGS, useLogState, useLogUpdater 
 import { ExportSettings, STORAGE_KEY as STORAGE_KEY_SETTINGS, useSettings } from "./useSettings";
 import { STORAGE_KEY as STORAGE_KEY_TAGS, Tag, useTagsState, useTagsUpdater } from "./useTags";
 
-type ResetType = "factory" | "data"
+type ResetType = "factory" | "config";
 
 type ExportData = {
   version: string;
@@ -79,6 +79,7 @@ export const useDatagate = (): {
   const reset = () => {
     logUpdater.reset();
     tagsUpdater.reset();
+    analytics.reset()
   }
 
   const factoryReset = () => {
@@ -86,6 +87,10 @@ export const useDatagate = (): {
     resetSettings();
     analytics.reset()
   };
+
+  const settingsReset = () => {
+    resetSettings();
+  }
 
   const openImportDialog = async (): Promise<void> => {
     return askToImport()
@@ -116,7 +121,7 @@ export const useDatagate = (): {
 
   const openResetDialog = async (type: ResetType) => {
     analytics.track("data_reset_asked");
-    const resetFn = type === "factory" ? factoryReset : reset;
+    const resetFn = type === "factory" ? factoryReset : settingsReset;
 
     if (Platform.OS === "web") {
       resetFn()

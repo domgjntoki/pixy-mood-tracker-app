@@ -19,7 +19,7 @@ export const SlideMoodButton = ({
   const scale = useScale();
   const colorScheme = useColorScheme();
 
-  const height = Math.max(40, SCREEN_HEIGHT * 0.48 / 7);
+  const height = Math.max(80, SCREEN_HEIGHT * 0.58 / 7);
   const width = height * 3;
 
   return (
@@ -42,9 +42,9 @@ export const SlideMoodButton = ({
       })}
     >
       <View style={{
-        flex: 1,
+        //flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
+        //justifyContent: 'center',
       }}>
         <Check
           color={selected ? scale.colors[rating].text : 'transparent'}
@@ -55,10 +55,11 @@ export const SlideMoodButton = ({
         <Text
           style={{
             color: scale.colors[rating].text,
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: 'bold',
             textAlign: 'center',
             marginTop: 2, // Pequeno espaçamento entre emoji e texto
+            marginBottom: 20,
           }}
         >
           {t(`ratings.${rating}`)}

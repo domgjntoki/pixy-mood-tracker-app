@@ -50,11 +50,11 @@ export const DataScreen = ({ navigation }: RootStackScreenProps<'Data'>) => {
         <TextInfo>{t('export_help')}</TextInfo>
         <MenuList style={{ marginTop: 16, }}>
           <MenuListItem
-            testID='reset-data'
-            title={t('reset_data_button')}
+            testID='reset-config'
+            title={t('reset_config_button')}
             onPress={() => {
               datagate
-                .openResetDialog('data')
+                .openResetDialog('config')
                 .catch((e) => console.log(e))
             }}
             iconLeft={<Trash width={18} color='red' />}
